@@ -10,3 +10,6 @@ console.log(Emanuel.sayMyName());
 
 // Importanto o module Fs
 // require('./modules/fs');
+
+// Importanto o module http para a API
+require('./modules/http');

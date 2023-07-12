@@ -1,7 +1,7 @@
-const { error } = require('console');
 const fs = require('fs');
 const path = require('path');
 
+// Criar uma pasta
 // Criar uma pasta
 fs.mkdir(path.join(__dirname, '/bblioteca'), (error) => {
     if (error) {
