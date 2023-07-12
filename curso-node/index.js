@@ -1,15 +1,20 @@
 // Importando um modulo, a class person para o
 // Arquivo atual
-const { Person } = require('./person');
-const Emanuel = new Person("Emanuel");
-console.log(Emanuel.sayMyName());
+const dotenv = require("dotenv");
+const connectToDatabase = require('./src/database/connection');
 
+dotenv.config();
+
+connectToDatabase();
 
 // Importando o module Path
 // require('./modules/path');
 
-// Importanto o module Fs
+// Importando o module Fs
 // require('./modules/fs');
 
-// Importanto o module http para a API
-require('./modules/http');
+// Importando o module http para a API
+// require('./modules/http');
+
+// Importando o module express com a API
+// require('./src/modules/express');
