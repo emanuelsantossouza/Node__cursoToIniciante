@@ -17,4 +17,4 @@ connectToDatabase();
 // require('./modules/http');
 
 // Importando o module express com a API
-// require('./src/modules/express');
+require('./modules/express');
