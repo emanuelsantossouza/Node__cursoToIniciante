@@ -4,6 +4,8 @@ const port = 8081;
 const UserModel = require('../src/models/user.models');
 const { default: mongoose } = require('mongoose');
 
+const Swal = require('sweetalert2')
+
 const bodyParser = require('body-parser');
 
 // Configuração para permitir o uso de dados do formulário
@@ -42,6 +44,8 @@ app.post(`/users/cadastro`, async (req, res) => {
     const salvandoToMongoDb = await UserModel.create(newUser)
     try {
         res.status(201).json(salvandoToMongoDb);
+        console.log('Usuario cadastrado com sucesso!');
+
     } catch (error) {
         res.status(500).send(error.message);
     }
@@ -63,7 +67,7 @@ app.get('/users/cadastro/views', async (req, res) => {
 
 
 
-app.get('/users/views', async (req, res) => {
+app.get('**', async (req, res) => {
     const user = await UserModel.find({});
 
     console.log(user);
