@@ -4,10 +4,6 @@ const port = 8081;
 const UserModel = require('../src/models/user.models');
 const { default: mongoose } = require('mongoose');
 
-const Swal = require('sweetalert2')
-
-const bodyParser = require('body-parser');
-
 // Configuração para permitir o uso de dados do formulário
 app.use(bodyParser.urlencoded({ extended: true }));
 
