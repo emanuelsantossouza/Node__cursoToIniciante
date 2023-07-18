@@ -7,7 +7,8 @@
     "node": "18.x"
   },
   "scripts": {
-    "start:dev": "nodemon ./index.js"
+    "start:dev": "nodemon ./index.js",
+    "vercel-build": "nodemon ./index.js"
   },
   "author": "",
   "license": "ISC",
